@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="pt">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Convert</title>
+    <link rel="stylesheet" href="static/nicepage.css" media="screen">
+    <link rel="stylesheet" href="static/pagina-inicial.css" media="screen">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-image: url("{{ url_for('static', filename='background.jpg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex; /* Adiciona flex ao body */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100vh; /* Define a altura da página como 100% da viewport */
+    }
+
+    .custom-button {
+        background-color: #63D7D9;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .custom-button:hover {
+        background-color: #479A9C;
+    }
+</style>
+<body>
+    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-1" id="sec-c595" data-image-width="1980" data-image-height="1320">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <h1 class="u-align-center u-custom-font u-font-lato u-text u-text-body-alt-color u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1500"> Transforme qualquer texto em áudio</h1>
+            <h3 class="u-align-center u-text u-text-body-alt-color u-text-2" data-animation-name="customAnimationIn" data-animation-duration="500">Digite o texto desejado e obtenha uma versão em áudio para download gratuito.</h3>
+            <form action="/convert" method="post">
+                <textarea name="text" rows="4" cols="50"></textarea><br>
+                <button type="submit" class="custom-button">Converter e Baixar</button>
+            </form>
+        </div>
+    </section>
+
+<footer class="footer px-5 py-10">
+    <ul class="flex justify-between items-center">
+        <li>&copy; 2023</li>
+        <li> Feito com Python (Flask)</li>
+        <li>
+            <a class="info" href="https://github.com/HugoLeandro" target="_blank" >
+                <i class="bi bi-github"></i>
+                <span class="conversation-title text-light flex ml-4 justify-between items-center">
+                    <i class="bi bi-github"></i> <span class="ml-2">HugoLeandro</span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
